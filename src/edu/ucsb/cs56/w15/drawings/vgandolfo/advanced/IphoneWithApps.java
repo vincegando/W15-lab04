@@ -16,14 +16,20 @@ import edu.ucsb.cs56.w15.drawings.utilities.GeneralPathWrapper;
 /**
    An Iphone with Apps on the screen
       
-   @author Phill Conrad 
-   @version for CS56, W11, UCSB, 02/23/2011
+   @author Vincent Gandolfo
+   @version for CS56, W15, UCSB, 
    
 */
 public class IphoneWithApps extends Iphone implements Shape
 {
     /**
      * Constructor for objects of class IphoneWithApps
+
+       @param x x coord of lower left corner of iPhone
+       @param y y coord of lower left corner of iPhone
+       @param width width of the iPhone
+       @param height of the iPhone
+
      */
     public IphoneWithApps(double x, double y, double width, double height)
     {
@@ -49,19 +55,19 @@ public class IphoneWithApps extends Iphone implements Shape
 	//Make 7 apps on the screen
 
 	Rectangle2D.Double app1 =
-	    new Rectangle2D.Double(x + width * .15, y + height * .094 , width * .15, width * .15);
+	    new Rectangle2D.Double(x + width * .2, y + height * .094 , width * .15, width * .15);
 	Rectangle2D.Double app2 =
-	    new Rectangle2D.Double(x + 2*(width * .15), y + height * .094, width * .15 ,width * .15);
+	    new Rectangle2D.Double(x + (width * .4), y + height * .094, width * .15 ,width * .15);
 	Rectangle2D.Double app3 =
-	    new Rectangle2D.Double(x + 3*(width * .15), y + height * .094, width * .15 ,width * .15);
+	    new Rectangle2D.Double(x + (width * .6), y + height * .094, width * .15 ,width * .15);
 	Rectangle2D.Double app4 =
-	    new Rectangle2D.Double(x + width * .15, y + height * .141, width * .15 ,width * .15);
+	    new Rectangle2D.Double(x + width * .2, y + height * .3, width * .15 ,width * .15);
 	Rectangle2D.Double app5 =
-	    new Rectangle2D.Double(x + 2*(width * .15), y + height * .141, width * .15 ,width * .15);
+	    new Rectangle2D.Double(x + (width * .4), y + height * .3, width * .15 ,width * .15);
 	Rectangle2D.Double app6 =
-	    new Rectangle2D.Double(x + 3*(width * .15), y + height * .141, width * .15 ,width * .15);
+	    new Rectangle2D.Double(x + (width * .6), y + height * .3, width * .15 ,width * .15);
 	Rectangle2D.Double app7 =
-	    new Rectangle2D.Double(x + width * .15, y + height *.188, width * .15,width * .15);	
+	    new Rectangle2D.Double(x + width * .2, y + height *.6, width * .15,width * .15);	
 	
 
 

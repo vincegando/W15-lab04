@@ -57,9 +57,9 @@ public class Iphone extends GeneralPathWrapper implements Shape
            new Ellipse2D.Double
            (
 	    x + halfOfWidth - halfOfWidth * .1,
-             y + height - height * .08,
-	    width * .15,
-	    width * .15
+             y + height - height * .09,
+	    width * .1,
+	    width * .1
            );
 
 	  Rectangle2D.Double screen = 
