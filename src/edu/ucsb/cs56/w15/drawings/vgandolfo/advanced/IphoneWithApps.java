@@ -33,24 +33,13 @@ public class IphoneWithApps extends Iphone implements Shape
      */
     public IphoneWithApps(double x, double y, double width, double height)
     {
-	// construct the basic house shell
+	
 	super(x,y,width,height);
 
 	// get the GeneralPath that we are going to append stuff to
 	GeneralPath gp = this.get();
 	
-	// Make three windows, spaced like this, where w=width/10.0;
-	// | +--+ +--+ +--+ |
-	// | |  | |  | |  | |
-	// | +--+ +--+ +--+ |
-	// |w 2w w 2w w w2 w|
-	//
-	// The top of window will be at y + 0.5*height and the
-	// height of the window is 0.25height;
 
-	//double w = 0.10 * width;
-	//double winTop = y + 0.5 * height;
-	//double winHt =  0.25 * height;
 
 	//Make 7 apps on the screen
 
@@ -73,8 +62,6 @@ public class IphoneWithApps extends Iphone implements Shape
 
 
 
-
-	// add the windows to the house
 	// Look up the meaning of the second parameter of append
 	// (Hint--is a method of "GeneralPath")
 

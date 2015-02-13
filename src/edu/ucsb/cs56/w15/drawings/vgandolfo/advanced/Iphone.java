@@ -40,10 +40,8 @@ public class Iphone extends GeneralPathWrapper implements Shape
         // hard coded a particular drawing, this may be an easier
         // way.
         
-        //double IphoneHeight = .75 * height;
-        //double roofHeight = height - firstStoryHeight;
-        
-        //double firstStoryUpperLeftY = y + roofHeight;
+  
+      
         
         // Make the first story
         
@@ -68,19 +66,12 @@ public class Iphone extends GeneralPathWrapper implements Shape
           
 	
 
-	  //g2.draw(snowManBottomCircle);                  
+                
         
-	// make the roof.   Remember that y goes DOWN the page,
+	//  Remember that y goes DOWN the page,
         // so we ADD to y to get a "lower" value on the screen
         
-        /*Line2D.Double leftRoof = 
-            new Line2D.Double (x, y + roofHeight,
-                               x + width/2.0, y);
-                               
-        Line2D.Double rightRoof =
-            new Line2D.Double (x + width/2.0, y,
-                               x + width, y + roofHeight);
-	*/
+  
         // put the whole house together
        
         GeneralPath wholeIphone = this.get();
