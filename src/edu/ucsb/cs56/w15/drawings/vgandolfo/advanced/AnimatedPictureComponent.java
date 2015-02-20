@@ -4,7 +4,6 @@ import java.awt.Graphics2D;
 import javax.swing.JPanel;
 import javax.swing.JComponent;
 
-// the four tools things we'll use to draw
 
 import java.awt.geom.Line2D;  // single lines
 import java.awt.geom.Ellipse2D;  // ellipses and circles
@@ -47,20 +46,19 @@ public class AnimatedPictureComponent extends JComponent
     private double travelDistance;
 
 
-    // starting length: 300; width: 30
+    
     /** Constructs an AnimatedPictureComponent with specific properties.
-	This animated picture depicts a pencil writing across the screen
+	This animated picture depicts an Iphone traveling across the screen
 
-	@param startingXPos the starting x position of the pencil
-	@param startingYPos the starting y position of the pencil
-	@param travelSpeed the speed at which the pencil will move
+	@param startingXPos the starting x position of the Iphone
+	@param startingYPos the starting y position of the Iphone
+	@param speed1 the speed at which the Iphone will move
 	across the screen
-	@param travelDistance the number of pixels the pencil will move
+	@param travelDistance the number of pixels the Iphone will move
 	across the screen before stopping
-	@param scribbleSpeed the speed at which the pencil oscillates (or
-	scribbles) back and forth
-	@param startingLength the starting length of the pencil in pixels
-	@param width the width of the pencil in pixels
+	@param speed2 the speed at which the Iphone oscillates back and forth
+	@param startingLength the starting length of the Iphone in pixels
+	@param width the width of the Iphone in pixels
     */
     public AnimatedPictureComponent(double startingXPos, double startingYPos, double speed2, double travelDistance, double speed1, double startingLength, double width) {
 	this.startingXPos = startingXPos;
@@ -73,18 +71,17 @@ public class AnimatedPictureComponent extends JComponent
 	this.width = width;
 
 	iphone = new IphoneWithApps(this.xPos, this.startingYPos, this.width, this.startingLength);
-	//eraserHeight = ((Pencil)pencil).getEraserHeight();
+	
     }
 
     /** The paintComponent method is orverriden to display
 	out animation. Each time this method is called, the
-	position of the pencil is updated
+	position of the Iphone is updated
      */
     
    public void paintComponent(Graphics g)
    {  
        Graphics2D g2 = (Graphics2D) g;
-       //g2.draw(new Rectangle(0, 0, 
        if (xPos >= startingXPos + travelDistance) {
 	   this.xPos = startingXPos;
 	   this.t = 0;
@@ -97,9 +94,6 @@ public class AnimatedPictureComponent extends JComponent
        t += speed1;
        xTravel += speed2;
        xPos = xTravel + startingXPos;
-       //double wobble = amplitude*(1/speed1)*Math.sin(t) + amplitude*0.8*(1/speed1)*Math.sin(0.8*t+1.5);
-       //xPos += wobble;
-       //double length = (1 - (xTravel/travelDistance))*(startingLength);
        double yPos = startingYPos;
        
        iphone = ShapeTransforms.translatedCopyOf(new IphoneWithApps(xPos, yPos, width, startingLength), 3, 0);

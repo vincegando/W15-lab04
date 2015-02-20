@@ -82,27 +82,27 @@ public class AnimatedPictureViewer extends JFrame
 
     class Animate extends Thread{
 
-	public void run(){//begin run method
+	public void run(){
 	    try{
 		//The following code will continue to
 		// loop until the animation thread is
 		// interrupted by the mouseExited 
 		// method.               
 		while(true){
-		    //Display several images in succession. 
+		     
 		    display(10);
-		}//end while loop  
+		}
 	    }catch(Exception ex){
 		if(ex instanceof InterruptedException){
 		    //Do nothing. This exception is
 		    // expected on mouseExited.    
 		}else{//Unexpected exception occurred.
 		    System.out.println(ex);
-		    System.exit(1);//terminate program
-		}//end else                    
-	    }//end catch              
-	}//end run          
-	//-----------------------------------------//
+		    System.exit(1);
+		}                
+	    }              
+	}          
+	
 
 	//This method displays an image and sleeps
 	// for a prescribed period of time.  It 
@@ -111,18 +111,16 @@ public class AnimatedPictureViewer extends JFrame
 	// by the mouseExited method.     
 	void display(int delay)
 	    throws InterruptedException{
-	    //update the animation
+	    
 	    component.repaint();
-	    //Check interrupt status.  If interrupted
-	    // while not asleep, force animation to
-	    // terminate.              
+	               
 	    if(Thread.currentThread().interrupted())
 		throw(new InterruptedException());
 	    //Delay specified number of msec.
 	    //Terminate animation automatically if
 	    // interrupted while asleep.  
 	    Thread.currentThread().sleep(delay);
-	}//end display method    
-	//-----------------------------------------//
-    }//end inner class named Animate     
+	}
+	
+    }    
 }
