@@ -56,7 +56,7 @@ public class AnimatedPictureComponent extends JComponent
 	across the screen
 	@param travelDistance the number of pixels the Iphone will move
 	across the screen before stopping
-	@param speed2 the speed at which the Iphone oscillates back and forth
+	@param speed2 the speed at which the Iphone goes back and forth
 	@param startingLength the starting length of the Iphone in pixels
 	@param width the width of the Iphone in pixels
     */

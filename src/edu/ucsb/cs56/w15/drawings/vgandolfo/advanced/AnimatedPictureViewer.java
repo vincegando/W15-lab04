@@ -4,7 +4,7 @@ import java.awt.event.*;
 
 /** A viewer class to see a picture I drew with 
  *  just three simple Java graphics objects, namely
- *  Rectangle, Line2D.Double, Ellipse2D.Double
+ *  Rectangle, Line2D.Double,
  *  
  * @author P. Conrad 
  * @author Vincent Gandolfo
@@ -27,8 +27,6 @@ public class AnimatedPictureViewer extends JFrame
     /** constructs a JFrame with an animated picture inside
      */
     public AnimatedPictureViewer() {
-	// If user passed a command line argument, 
-	// get which picture we want to display from the user
 	
 	// Set the size to whatever size you like (width, height)
 	// For projects you turn in, lets not get any bigger than 640,480	
@@ -59,7 +57,7 @@ public class AnimatedPictureViewer extends JFrame
 				    // the animation on it.
 				 animate = new Animate();
 				 animate.start();
-						    }//end mouseEntered
+						    }
 						    
 		 public void mouseExited(MouseEvent e){
 			 //Terminate the animation.
@@ -67,12 +65,12 @@ public class AnimatedPictureViewer extends JFrame
 			  //Let the thread die a natural death.
 			  // Then make it eligible for garbage
 			  // collection.
-		    while (animate.isAlive()){}//loop;
+		    while (animate.isAlive()){}
 			 animate = null;
-						    }//end MouseExited
-						}//end new MouseAdapter
-						);//end addMouseListener()
-	//End definition of anonymous inner class
+						    }
+						}
+						);
+	
 	setVisible(true);
     }
 
